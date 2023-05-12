@@ -4,9 +4,12 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         if not root:
+            # [-3], error
             return 0 
         right_max = self.maxPathSum(root.right)
         left_max = self.maxPathSum(root.left)
